@@ -1,0 +1,149 @@
+// import React from 'react'
+// import KeyImg from '../../../assets/keys.png';
+// import ArrowLine1 from '../../../assets/line1.png';
+// import ArrowLine2 from '../../../assets/line2.png';
+
+// import { Link } from 'react-router-dom';
+// const NavBar =() => {
+//   return (
+    
+//     <nav className="flex justify-between items-center px-6 py-4 text-white">
+//       <img src ={KeyImg} alt ='keys to keys ' className = ""/>
+//       <div className="font-bold text-lg">KEYS TO KEYS</div>
+//       <ul className="flex space-x-6">
+//         <li className="hover:text-pink-500 cursor-pointer">
+//           <img src ={ArrowLine1} alt ='keys to keys ' className = ""/> Home
+//           <img src ={ArrowLine2} alt ='keys to keys ' className = ""/></li>
+//         <li className="hover:text-pink-500 cursor-pointer">Courses</li>
+//         <li className="hover:text-pink-500 cursor-pointer">Blog</li>
+//         <li className="hover:text-pink-500 cursor-pointer">About us</li>
+//       </ul>
+//       <div className="flex space-x-4">
+//         <button className="px-4 py-2 bg-white text-black rounded-md">Sign Up</button>
+//         <button className="px-4 py-2 bg-pink-600 text-white rounded-md">Log In</button>
+//       </div>
+//     </nav>
+//   );
+// }
+
+// export default NavBar
+
+
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LogoImg from "../../../assets/keys.png"
+// import ArrowLineTop from '../../../assets/line1.png';
+// import ArrowLineBottom from "../../../assets/line2.png";
+// import { useActiveSection } from "./useActiveSection.jsx";
+
+
+const NavBar = () => {
+  // const [menuOpen, setMenuOpen] = useState(false);
+  // const activeId = useActiveSection(["home", "courses", "blog", "about"]);
+
+  return (
+    <nav className="sticky top-0 left-0 w-full z-50 px-6 md:px-10 py-4 bg-img bg-opacity-80 backdrop-blur-md text-white">
+  <div className="flex items-center justify-between w-full">
+    {/* Left: Logo */}
+    <div className="flex items-center gap-3 sm:ml-9">
+      <img src={LogoImg} alt="logo" className="w-7 h-8 sm:w-10 sm:h-10" />
+      <div className="text-xl font-bold">KEY TO KEYS</div>
+    </div>
+   
+    </div>
+  
+</nav>
+
+  );
+};
+
+export default NavBar;
+
+
+
+
+
+// const NavBar = () => {
+
+//   const activeId = useActiveSection(["home", "courses", "blog", "about"]);
+
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   return (
+//     <nav className="absolute top-0 left-0 w-full z-20 px-6 py-4 text-white flex justify-between items-center bg-transparent">
+//       {/* Brand */}
+//       <div className="text-2xl font-bold">KEYS TO KEYS</div>
+
+//       {/* Desktop Nav */}
+//       <ul className="hidden md:flex space-x-6 text-sm font-medium">
+//         <li>
+//           <a href="#home" className="hover:text-pink-500">Home</a>
+//         </li>
+//         <li>
+//           <a href="#courses" className="hover:text-pink-500">Courses</a>
+//         </li>
+//         <li>
+//           <a href="#blog" className="hover:text-pink-500">Blog</a>
+//         </li>
+//         <li>
+//           <a href="#about" className="hover:text-pink-500">About us</a>
+//         </li>
+//       </ul>
+
+//       {/* Desktop Buttons */}
+//       <div className="hidden md:flex space-x-4">
+//         <Link to="/signup">
+//           <button className="px-4 py-2 bg-white text-black rounded-md">Sign Up</button>
+//         </Link>
+//         <Link to="/login">
+//           <button className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md">Log In</button>
+//         </Link>
+//       </div>
+
+//       {/* Mobile Menu Toggle */}
+//       <div className="md:hidden">
+//         <button onClick={() => setMenuOpen(!menuOpen)}>
+//           <svg
+//             className="w-6 h-6"
+//             fill="none"
+//             stroke="currentColor"
+//             viewBox="0 0 24 24"
+//           >
+//             <path
+//               strokeLinecap="round"
+//               strokeLinejoin="round"
+//               strokeWidth="2"
+//               d={
+//                 menuOpen
+//                   ? "M6 18L18 6M6 6l12 12"
+//                   : "M4 6h16M4 12h16M4 18h16"
+//               }
+//             />
+//           </svg>
+//         </button>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       <div
+//         className={`${
+//           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+//         } absolute top-full left-0 w-full overflow-hidden bg-black bg-opacity-90 text-white flex flex-col items-center transition-all duration-500 ease-in-out py-2 md:hidden`}
+//       >
+//         <a href="#home" onClick={() => setMenuOpen(false)} className="py-2 hover:text-pink-500">Home</a>
+//         <a href="#courses" onClick={() => setMenuOpen(false)} className="py-2 hover:text-pink-500">Courses</a>
+//         <a href="#blog" onClick={() => setMenuOpen(false)} className="py-2 hover:text-pink-500">Blog</a>
+//         <a href="#about" onClick={() => setMenuOpen(false)} className="py-2 hover:text-pink-500">About us</a>
+//         <div className="flex space-x-4 mt-4">
+//           <Link to="/signup">
+//             <button className="px-4 py-2 bg-white text-black rounded-md">Sign Up</button>
+//           </Link>
+//           <Link to="/login">
+//             <button className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md">Log In</button>
+//           </Link>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default NavBar;
