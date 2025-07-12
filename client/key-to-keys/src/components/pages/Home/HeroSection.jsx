@@ -6,14 +6,14 @@
 
 
 import React from "react";
-import PianoImage from "../../../assets/piano.png";
+import PianoImage from "../../../assets/Piano.png";
 
 const HeroSection = () => {
   return (
     <section 
-    id = 'home'
+    
       // className="relative h-screen bg-cover bg-center text-white flex flex-col justify-center items-center text-center px-6"
-      // style={{ backgroundImage: `url(${BgImage})` }}
+      // style={{ backgroundImage: `url(${BgImage})
       className="h-[calc(100vh-80px)] flex flex-col justify-center items-center text-center px-6">
     
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
