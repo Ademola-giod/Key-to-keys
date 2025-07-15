@@ -23,7 +23,7 @@ const AboutTutor = () => {
             <br/>
             He started his music career in a local church under the Redeemed 
             Christian Church of God in the year 2005.
-      cd      <br/>
+            <br/>
             <br/>
             He became a music instructor in the year 2013. Ever since, he has taught
             no less than forty beginner students and successfully mentored no less
