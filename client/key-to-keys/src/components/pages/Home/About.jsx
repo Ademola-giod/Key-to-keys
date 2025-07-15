@@ -53,11 +53,11 @@ const AboutTutor = () => {
         <img
           src={tutorImg}
           alt="Tutor"
-          className="w-full max-w-sm md:w-[481px] md:h-[598px] object-cover rounded-[24px] shadow-lg"
+          className="w-[444px]  md:w-[481px] md:h-[598px] object-cover rounded-[24px] shadow-lg"
         />
 
-        <div className="w-[571px] h-[496px] flex flex-col gap-4 ml-8">
-          <h2 className="text-xl font-bold">About the tutor</h2>
+        <div className="flex-1 flex flex-col gap-4 ml-0 lg:ml-8">
+          <h1 className="text-xl font-bold">About the tutor</h1>
           < div className="text-white text-base leading-relaxed">
             Temitope Jonathan Egbeyemi is a contemporary gospel Keyboardist
             and medical doctor in the field of surgery.

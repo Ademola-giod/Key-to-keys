@@ -7,9 +7,17 @@
 
 
 import React from "react";
+// import {useNavigate} from "react-router-dom"
 import PianoImage from "../../../assets/Piano.png";
 
 const HeroSection = () => {
+
+  // const navigate = useNavigate();
+
+  // // directs user to course page
+  // const handleGetStarted = () => {
+  //   navigate('/courses')
+  // }
   return (
     <section 
     
@@ -33,7 +41,9 @@ const HeroSection = () => {
           professional piano player.
         </p>
 
-        <button className="mt-8 px-10 py-3 bg-primary hover:bg-[#651b2e]  rounded-md text-white text-base sm:text-lg">
+        <button 
+        // onclick =}
+        className="mt-8 px-10 py-3 bg-primary hover:bg-[#651b2e]  rounded-md text-white text-base sm:text-lg">
           GET STARTED
         </button>
       </div>
