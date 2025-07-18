@@ -1,11 +1,3 @@
-
-
-  
-
-
-
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import PianoImage from "../../../assets/Piano.png";
