@@ -1,38 +1,20 @@
 import express from "express";
-import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import paymentsRouter from "./routes/payments.js"; // your payment route
+import connectDB from "./config/mongodb.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
 
-// Load environment variables
+
 dotenv.config();
+connectDB();
+dotenv.config();
+console.log("Paystack key:", process.env.PAYSTACK_SECRET_KEY);
+
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
-// Middleware
-app.use(cors({
-  origin: "http://localhost:5173", // React frontend origin
-}));
+app.use(cors());
 app.use(express.json());
+app.use("/api", paymentRoutes);
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log("✅ MongoDB connected"))
-.catch((err) => console.error("❌ MongoDB connection error:", err));
-
-// Routes
-app.use("/api/payments", paymentsRouter);
-
-// Optional root route
-app.get("/", (req, res) => {
-  res.send("📢 Flutterwave Payment API is running");
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
-});
+const PORT = 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

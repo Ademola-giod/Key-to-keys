@@ -7,17 +7,12 @@
 
 
 import React from "react";
-// import {useNavigate} from "react-router-dom"
+import { Link } from "react-router-dom";
 import PianoImage from "../../../assets/Piano.png";
 
 const HeroSection = () => {
 
-  // const navigate = useNavigate();
 
-  // // directs user to course page
-  // const handleGetStarted = () => {
-  //   navigate('/courses')
-  // }
   return (
     <section 
     
@@ -36,18 +31,19 @@ const HeroSection = () => {
 
        
 
-        <p className="mt-2 max-w-md md:max-w-xl mx-auto text-sm sm:text-base md:text-lg text-white">
+        <p className="mt-4 max-w-md md:max-w-xl mx-auto text-sm sm:text-base md:text-lg text-white">
           My lessons take you from being an absolute beginner to being a skilled
           professional piano player.
         </p>
 
-        <button 
-        // onclick =}
-        className="mt-8 px-10 py-3 bg-primary hover:bg-[#651b2e]  rounded-md text-white text-base sm:text-lg">
+        <Link to="/courses">
+
+        <button className="mt-8 px-10 py-3 bg-primary hover:bg-[#651b2e]  rounded-md text-white text-base sm:text-lg">
           GET STARTED
         </button>
+        </Link>
       </div>
-    </section>
+    </section> 
   );
 };
 
