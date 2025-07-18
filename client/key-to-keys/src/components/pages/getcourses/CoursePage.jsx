@@ -1,4 +1,5 @@
 import React from "react";
+import coursepage from "../../../assets/coursepage.jpg"
 
 const CoursePage = () => {
   // paystack init
@@ -43,9 +44,9 @@ const CoursePage = () => {
     <section className="min-h-screen bg-[#F5F5F5] flex items-center justify-center px-4 py-12">
       <div className="max-w-md bg-white rounded-2xl shadow-xl p-6 text-center">
         <img
-          src="/your-piano-image.png"
+          src={coursepage}
           alt="Piano Course"
-          className="w-full h-48 object-contain mb-4"
+          className="w-full h-48 object-cover mb-4"
         />
         <h2 className="text-xl font-bold mb-2">Key to Keys: The Keyboardist's Companion</h2>
         <p className="text-gray-600 mb-4">
@@ -66,7 +67,7 @@ const CoursePage = () => {
 
         {/* ✅ Use function onClick */}
         <button
-          className="w-full bg-primary hover:bg-purple-700 text-white py-3 rounded-md text-lg"
+          className="w-full bg-primary hover:bg-[#651b2e] text-white py-3 rounded-md text-lg"
           onClick={handlePaystackPayment}
         >
           Enroll Now
