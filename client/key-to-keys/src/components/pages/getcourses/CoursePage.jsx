@@ -93,6 +93,9 @@ const CoursePage = () => {
   const navigate = useNavigate();
 
   const handlePaystackPayment = () => {
+console.log("💥 handlePaystackPayment fired");
+
+
     const email = document.getElementById("userEmail").value;
 
     if (!email) return alert("Please enter your email");
@@ -103,6 +106,7 @@ const CoursePage = () => {
       amount: 30000 * 100,
       currency: "NGN",
       callback: function (response) {
+        console.log("✅ Paystack callback triggered", response)
         fetch("http://localhost:5000/api/verify-payment", {
           method: "POST",
           headers: {
@@ -131,8 +135,17 @@ const CoursePage = () => {
               });
 
               // Redirect
-              navigate("/thank-you");
+              console.log("Redirecting to thank-you...");
+              // navigate("/thank-you");
+              navigate("/thank-you", {
+                  state: {
+                    email,
+                    link: "https://drive.google.com/file/d/1Pe9J5nPtxBm14mrVvfJeugSCLwqwC0ox/view?usp=drivesdk",
+                  },
+                });
+
             } else {
+              
               alert("Payment verification failed");
             }
           });
@@ -169,6 +182,8 @@ const CoursePage = () => {
           className="w-full border rounded-md px-3 py-2 mb-4"
           id="userEmail"
         />
+        
+        {/* console.log("💥 handlePaystackPayment fired"); */}
 
         <button
           className="w-full bg-primary hover:bg-[#651b2e] text-white py-3 rounded-md text-lg"

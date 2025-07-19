@@ -12,7 +12,9 @@ console.log("Paystack key:", process.env.PAYSTACK_SECRET_KEY);
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173", // or your frontend port
+}))
 app.use(express.json());
 app.use("/api", paymentRoutes);
 

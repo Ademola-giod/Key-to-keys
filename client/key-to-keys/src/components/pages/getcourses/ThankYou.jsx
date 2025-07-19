@@ -6,7 +6,7 @@ const ThankYou = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState(null);
+  const [_email, setEmail] = useState(null);
   const [link, setLink] = useState(null);
   const [loading, setLoading] = useState(true);
 

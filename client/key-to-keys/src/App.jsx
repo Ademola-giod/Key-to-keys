@@ -6,7 +6,7 @@ import ThankYou from "./components/pages/getcourses/ThankYou.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+   
       <Routes>
         <Route path="/" element={<Home />} /> 
         <Route path="/courses" element={<CoursePage />} />
@@ -14,7 +14,7 @@ function App() {
 
 
       </Routes>
-    </BrowserRouter>
+    
   );
 }
 export default App
