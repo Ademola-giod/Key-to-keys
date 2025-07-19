@@ -32,7 +32,7 @@ app.use(cors({
 
 
 app.use(express.json());
-app.use("/api", paymentRoutes);
+app.use("/api/save-payment", paymentRoutes);
 
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
