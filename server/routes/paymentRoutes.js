@@ -4,6 +4,8 @@ import Payment from "../models/payment.js"
 
 const router = express.Router();
 
+
+// verify and save payment 
 router.post("/verify-payment", async (req, res) => {
   const { reference, email } = req.body;
 

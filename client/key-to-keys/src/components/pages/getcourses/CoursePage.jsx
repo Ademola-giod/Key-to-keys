@@ -107,7 +107,7 @@ console.log("💥 handlePaystackPayment fired");
       currency: "NGN",
       callback: function (response) {
         console.log("✅ Paystack callback triggered", response)
-        fetch("http://localhost:5000/api/verify-payment", {
+        fetch("https://key-to-keys.onrender.com/api/verify-payment", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
