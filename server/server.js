@@ -12,9 +12,25 @@ console.log("Paystack key:", process.env.PAYSTACK_SECRET_KEY);
 
 
 const app = express();
+
+// update Cors configuration to allow localhost and live domain
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://www.learnkeytokeys.com"
+];
+
 app.use(cors({
-  origin: "http://localhost:5173", // or your frontend port
-}))
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
+
+
 app.use(express.json());
 app.use("/api", paymentRoutes);
 
