@@ -135,14 +135,15 @@ console.log("💥 handlePaystackPayment fired");
               });
 
               // Redirect
+              
               console.log("Redirecting to thank-you...");
-              // navigate("/thank-you");
-              navigate("/thank-you", {
-                  state: {
-                    email,
-                    link: "https://drive.google.com/file/d/1Pe9J5nPtxBm14mrVvfJeugSCLwqwC0ox/view?usp=drivesdk",
-                  },
-                });
+              navigate("/thank-you");
+              // navigate("/thank-you", {
+              //     state: {
+              //       email,
+              //       link: "https://drive.google.com/file/d/1Pe9J5nPtxBm14mrVvfJeugSCLwqwC0ox/view?usp=drivesdk",
+              //     },
+              //   });
 
             } else {
               

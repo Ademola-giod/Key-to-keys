@@ -1,41 +1,62 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { FaHandPointRight } from "react-icons/fa";
+import { MdVerified } from "react-icons/md"
 import BgImage from "../../../assets/hero-bg.jpg";
 
 const ThankYou = () => {
-  const location = useLocation();
+  const _location = useLocation();
   const navigate = useNavigate();
 
   const [_email, setEmail] = useState(null);
   const [link, setLink] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
-    let userEmail, courseLink;
+  const stored = localStorage.getItem("paymentSuccess");
 
-    if (location.state?.email && location.state?.link) {
-      userEmail = location.state.email;
-      courseLink = location.state.link;
-      localStorage.setItem("paymentSuccess", JSON.stringify({ email: userEmail, link: courseLink }));
-    } else {
-      const stored = localStorage.getItem("paymentSuccess");
-      if (stored) {
-        const data = JSON.parse(stored);
-        userEmail = data.email;
-        courseLink = data.link;
-      }
-    }
+  if (stored) {
+    const data = JSON.parse(stored);
+    setEmail(data.email);
+    setLink(data.link);
+  } else {
+    navigate("/");
+  }
 
-    if (!userEmail || !courseLink) {
-      navigate("/");
-    } else {
-      setEmail(userEmail);
-      setLink(courseLink);
-    }
+  // Delay to show loading spinner
+  const timeout = setTimeout(() => setLoading(false), 1000);
 
-    // Add smooth for spinner
-    setTimeout(() => setLoading(false), 1000);
-  }, [location.state, navigate]);
+  // Optional cleanup
+  return () => clearTimeout(timeout);
+}, [navigate]);
+
+  // useEffect(() => {
+    // let userEmail, courseLink;
+
+    // if (location.state?.email && location.state?.link) {
+    //   userEmail = location.state.email;
+    //   courseLink = location.state.link;
+    //   localStorage.setItem("paymentSuccess", JSON.stringify({ email: userEmail, link: courseLink }));
+    // } else {
+  //     const stored = localStorage.getItem("paymentSuccess");
+  //     if (stored) {
+  //       const data = JSON.parse(stored);
+  //       userEmail = data.email;
+  //       courseLink = data.link;
+  //     }
+    
+
+  //   if (!userEmail || !courseLink) {
+  //     navigate("/");
+  //   } else {
+  //     setEmail(userEmail);
+  //     setLink(courseLink);
+  //   }
+
+  //   // Add smooth for spinner
+  //   setTimeout(() => setLoading(false), 1000);
+  // }, [navigate]);
 
   if (loading) {
     return (
@@ -54,7 +75,7 @@ const ThankYou = () => {
 
       <div className="relative z-10 max-w-md w-full bg-white rounded-2xl shadow-lg p-6 text-center">
         <h2 className="text-2xl font-bold text-primary mb-4">🎉 Thank You!</h2>
-        <p className="text-gray-700 mb-2">Your payment has been successfully confirmed.</p>
+        <p className="text-gray-700 mb-2"><MdVerified className="inline aline-middle w-6 text-2xl text-green-500" title="verified"/>Your payment has been successfully confirmed. </p>
         <p className="text-gray-600 mb-6">
           My lessons take you from being an absolute beginner
           to being a skilled professional piano player.
@@ -66,9 +87,9 @@ const ThankYou = () => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline"
+            className="text-primary hover:text-[#651b2e] underline"
           >
-            🎹 Click here to download the Piano Course
+           <FaHandPointRight className="inline align-middle text-2xl text-[#030101] ml-1 animate-bounce" />Click here to download the Piano Course
           </a>
         </div>
       </div>

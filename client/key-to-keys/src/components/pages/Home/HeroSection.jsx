@@ -18,7 +18,6 @@ const HeroSection = () => {
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
           Become a <span className="text-primary">master</span> at <br />
           playing the <span className="text-primary inline-flex items-center gap-2">piano <img src={PianoImage} alt="piano" className="w-8 h-8 inline-block" /></span>
-          {/* <span className="text-pink-600">piano </span> */}
         </h1>
 
        
