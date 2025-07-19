@@ -152,7 +152,7 @@ const CoursePage = () => {
       // Save email to localStorage (you'll use it on /verify-redirect page)
       localStorage.setItem("userEmail", email);
 
-      const response = await fetch("https://learnkeytokeys.com/api/initiate-payment", {
+      const response = await fetch("https://key-to-keys.onrender.com/api/initiate-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, amount: 30000 * 100 }),

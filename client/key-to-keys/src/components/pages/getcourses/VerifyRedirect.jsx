@@ -11,7 +11,7 @@ const VerifyRedirect = () => {
 
     if (!reference || !email) return;
 
-    fetch("https://learnkeytokeys.com/api/verify-payment", {
+    fetch("https://key-to-keys.onrender.com/api/verify-payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

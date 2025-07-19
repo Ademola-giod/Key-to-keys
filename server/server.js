@@ -49,9 +49,9 @@ console.log("Paystack key:", process.env.PAYSTACK_SECRET_KEY);
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:5173",
+  "http://localhost:5173", //for development
   "https://learnkeytokeys.com",          // Remove www here if you use non-www domain
-  "https://www.learnkeytokeys.com"
+  "https://www.learnkeytokeys.com" //for live site
 ];
 
 // CORS middleware with proper options handling
