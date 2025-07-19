@@ -126,13 +126,13 @@ console.log("💥 handlePaystackPayment fired");
               localStorage.setItem("paymentSuccess", JSON.stringify(paymentData));
 
               // ✅ Send to MongoDB
-              fetch("https://key-to-keys.onrender.com/api/save-payment", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(paymentData),
-              });
+              // fetch("https://key-to-keys.onrender.com/api/save-payment", {
+              //   method: "POST",
+              //   headers: {
+              //     "Content-Type": "application/json",
+              //   },
+              //   body: JSON.stringify(paymentData),
+              // });
 
               // Redirect
               
