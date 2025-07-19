@@ -126,7 +126,7 @@ console.log("💥 handlePaystackPayment fired");
               localStorage.setItem("paymentSuccess", JSON.stringify(paymentData));
 
               // ✅ Send to MongoDB
-              fetch("http://localhost:5000/api/save-payment", {
+              fetch("https://key-to-keys.onrender.com/api/save-payment", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -184,7 +184,7 @@ console.log("💥 handlePaystackPayment fired");
           id="userEmail"
         />
         
-        {/* console.log("💥 handlePaystackPayment fired"); */}
+      
 
         <button
           className="w-full bg-primary hover:bg-[#651b2e] text-white py-3 rounded-md text-lg"
