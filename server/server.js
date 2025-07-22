@@ -42,7 +42,7 @@ import cors from "cors";
 import connectDB from "./config/mongodb.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 
-dotenv.config();
+// dotenv.config();
 connectDB();
 console.log("Paystack key:", process.env.PAYSTACK_SECRET_KEY);
 
