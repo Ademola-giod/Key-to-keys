@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;  //from .env api route
 const VerifyRedirect = () => {
   const [_link, setLink] = useState(null);
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ const VerifyRedirect = () => {
       return;
     }
 
-    fetch(`http://localhost:5000/api/payment-status?email=${email}`)
+    fetch(`${API_BASE_URL}api/payment-status?email=${email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "success") {

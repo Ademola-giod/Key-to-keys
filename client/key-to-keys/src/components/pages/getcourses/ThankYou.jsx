@@ -4,6 +4,8 @@ import { FaHandPointRight } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 import BgImage from "../../../assets/hero-bg.jpg";
 
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const ThankYou = () => {
   const navigate = useNavigate();
 
@@ -11,6 +13,7 @@ const ThankYou = () => {
   const [link, setLink] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     const storedEmail = localStorage.getItem("userEmail");
@@ -22,7 +25,7 @@ const ThankYou = () => {
     setEmail(storedEmail);
 
     // Fetch payment/course info from backend
-    fetch(`http://localhost:5000/api/payment-status?email=${storedEmail}`)
+    fetch(`${API_BASE_URL}api/payment-status?email=${storedEmail}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "success") {

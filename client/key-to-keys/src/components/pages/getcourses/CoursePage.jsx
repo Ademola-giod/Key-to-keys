@@ -153,7 +153,7 @@ const CoursePage = () => {
       localStorage.setItem("userEmail", email);
 
       // const response = await fetch("/api/initiate-payment", 
-      const response = await  fetch("http://localhost:5000/api/initiate-payment", {
+      const response = await  fetch("${API_BASE_URL}api/initiate-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, amount: 30000 * 100 }),
@@ -162,7 +162,7 @@ const CoursePage = () => {
       const data = await response.json();
 
       if (data.authorization_url) {
-        window.location.href = data.authorization_url; // ✅ Redirect to Paystack
+        window.location.href = data.authorization_url; // Redirect to Paystack
       } else {
         alert("Failed to start payment.");
       }

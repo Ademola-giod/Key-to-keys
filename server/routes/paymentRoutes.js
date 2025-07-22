@@ -124,8 +124,8 @@ paymentRoutes.post("/initiate-payment", async (req, res) => {
       {
         email,
         amount,
-        callback_url: "http://localhost:5000/api/verify-redirect",
-        // callback_url: "https://learnkeytokeys.com/verify-redirect",
+        // callback_url: "http://localhost:5000/api/verify-redirect",
+        callback_url: "https://learnkeytokeys.com/verify-redirect",
       },
       {
         headers: {
