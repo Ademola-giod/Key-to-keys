@@ -140,6 +140,9 @@
 import coursepage from "../../../assets/coursepage.jpg";
 import { useNavigate } from "react-router-dom";
 
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL; /// api for routing 
+
 const CoursePage = () => {
   const _navigate = useNavigate(); // Assigned properly here
 
@@ -153,7 +156,7 @@ const CoursePage = () => {
       localStorage.setItem("userEmail", email);
 
       // const response = await fetch("/api/initiate-payment", 
-      const response = await  fetch("${API_BASE_URL}api/initiate-payment", {
+      const response = await  fetch(`${API_BASE_URL}api/initiate-payment`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, amount: 30000 * 100 }),
