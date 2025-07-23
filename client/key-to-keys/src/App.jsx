@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} /> 
         <Route path="/courses" element={<CoursePage />} />
-        <Route path="verify-redirect" element={<VerifyRedirect/>} />
+        <Route path="/verify-redirect" element={<VerifyRedirect/>} />
         <Route path="/thank-you" element={<ThankYou/>} />
 
 
