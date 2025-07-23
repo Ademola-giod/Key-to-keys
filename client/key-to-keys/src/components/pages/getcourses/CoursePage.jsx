@@ -336,7 +336,7 @@ const CoursePage = () => {
         />
 
         <button
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md text-lg font-semibold transition duration-300 ease-in-out shadow-md hover:shadow-lg"
+          className="w-full bg-primary hover:bg-[#651b2e] text-white py-3 rounded-md text-lg font-semibold transition duration-300 ease-in-out shadow-md hover:shadow-lg"
           onClick={handlePaystackPayment}
         >
           Enroll Now
