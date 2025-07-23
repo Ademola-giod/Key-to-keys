@@ -78,7 +78,7 @@ const ThankYou = () => {
           Your payment has been successfully confirmed.
         </p>
         <p className="text-gray-600 mb-6">
-          My lessons take you from being an absolute beginner to being a skilled professional piano player.
+          My lessons will take you from being an absolute beginner to being a skilled professional piano player.
         </p>
 
         <div className="border rounded-md p-4 bg-gray-100">
