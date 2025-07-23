@@ -5,7 +5,6 @@ services:
     rootDir: client
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    plan: free
     envVars:
       - key: REACT_APP_PAYSTACK_PUBLIC_KEY
         value: pk_test_133ee1f9dfa3299a8b66ec4f8713093e1d0c8411
@@ -16,7 +15,6 @@ services:
     rootDir: server
     buildCommand: npm install
     startCommand: node server.js
-    plan: free
     envVars:
       - key: MONGODB_URI
         value: "mongodb+srv://ademola65:ademola123@cluster0.ggem6.mongodb.net"
