@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: keytokeys-frontend
+    env: node
+    rootDir: client
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    plan: free
+    envVars:
+      - key: PAYSTACK_PUBLIC_KEY
+        value: pk_test_133ee1f9dfa3299a8b66ec4f8713093e1d0c8411
+
+  - type: web
+    name: keytokeys-backend
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: MONGODB_URI
+        value: "mongodb+srv://ademola65:ademola123@cluster0.ggem6.mongodb.net"
+      - key: PAYSTACK_SECRET_KEY
+        value: sk_test_88fea3dbaed4a025cd578f4c385a9d16e43c0a47
