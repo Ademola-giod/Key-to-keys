@@ -147,6 +147,42 @@ paymentRoutes.post("/initiate-payment", async (req, res) => {
 });
 
 
+paymentRoutes.post("/verify-payment", async (req, res) => {
+  const { reference, email } = req.body;
+
+  try {
+    const verifyResponse = await axios.get(`https://api.paystack.co/transaction/verify/${reference}`, {
+      headers: {
+        Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`,
+      },
+    });
+
+    const data = verifyResponse.data;
+
+    if (data.status && data.data.status === "success") {
+      // Optional: Save to DB if not already saved (prevent duplicates)
+      const existing = await Payment.findOne({ reference });
+      if (!existing) {
+        await Payment.create({
+          email,
+          reference,
+          amount: data.data.amount / 100,
+          status: "success",
+        });
+      }
+
+      return res.status(200).json({ status: "success", verified: true });
+    } else {
+      return res.status(400).json({ status: "failed", verified: false });
+    }
+
+  } catch (error) {
+    console.error("VERIFY ERROR:", error?.response?.data || error.message);
+    return res.status(500).json({ error: "Payment verification failed" });
+  }
+});
+
+
 // WEBHOOK — Paystack will POST here on payment events
 paymentRoutes.post("/webhook", express.json({ type: 'application/json' }), async (req, res) => {
   // Verify webhook signature for security (optional but recommended)

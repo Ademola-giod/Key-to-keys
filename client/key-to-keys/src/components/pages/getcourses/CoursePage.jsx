@@ -220,8 +220,9 @@ import { useNavigate } from "react-router-dom";
 
 // Access environment variables for API base URL and Paystack Public Key
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-const PAYSTACK_PUBLIC_KEY = import.meta.env.REACT_APP_PAYSTACK_PUBLIC_KEY;
+const PAYSTACK_PUBLIC_KEY = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
 
+console.log("paystack: public_key :", PAYSTACK_PUBLIC_KEY) 
 const CoursePage = () => {
   const _navigate = useNavigate(); // Assigned properly here
 

@@ -70,8 +70,8 @@ app.use(cors({
 }));
 
 // Handle OPTIONS preflight for all routes
-// app.options("/{*any}", cors());
-app.options("*", cors());
+app.options("/{*any}", cors());
+// app.options("*", cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
