@@ -1,13 +1,13 @@
 services:
   - type: web
     name: keytokeys-frontend
-    env: node
+    env: static
     rootDir: client
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     plan: free
     envVars:
-      - key: PAYSTACK_PUBLIC_KEY
+      - key: REACT_APP_PAYSTACK_PUBLIC_KEY
         value: pk_test_133ee1f9dfa3299a8b66ec4f8713093e1d0c8411
 
   - type: web
