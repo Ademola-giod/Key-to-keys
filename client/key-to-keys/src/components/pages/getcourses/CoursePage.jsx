@@ -61,7 +61,9 @@ const CoursePage = () => {
       const handler = window.PaystackPop.setup({
         key: PAYSTACK_PUBLIC_KEY, // Your Paystack Public Key
         email,
-        amount: 30000 * 100, // ₦30,000 in kobo
+        // amount: 30000 * 100, // ₦30,000 in kobo
+        amount: 500 * 100, // ₦500 in kobo
+
         currency: "NGN",
         callback: function (response) {
 
