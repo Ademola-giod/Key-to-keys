@@ -1,5 +1,4 @@
 import React from "react";
-;
 import tutorImg from "../../../assets/authorPics.png";  
 
 
@@ -48,18 +47,6 @@ const AboutTutor = () => {
             
           </div>
           
-{/* 
-          <div className="flex items-center gap-3 mt-4">
-            <FaInstagram className="text-primary text-lg" />
-            <FaTwitter className="text-primary text-lg" />
-            
-            {/* <a
-              href="mailto:Temitopeegbeyemi@gmail.com"
-              className="text-sm text-white underline"
-            > */}
-            
-            {/* </a> */}
-          {/* </div> */}
         </div>
       </div>
     </section>
