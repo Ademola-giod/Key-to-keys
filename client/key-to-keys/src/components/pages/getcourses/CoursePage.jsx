@@ -14,7 +14,8 @@ const CoursePage = () => {
 
 // check if email is valid 
   const isValidEmail = (email) =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+  
   const handlePaystackPayment = async () => {
     const email = document.getElementById("userEmail").value;
 
@@ -61,11 +62,12 @@ const CoursePage = () => {
         amount: 30000 * 100, // ₦30,000 in kobo
         currency: "NGN",
         callback: function (response) {
+
           // Payment successful, now verify on your backend
           console.log("Paystack callback response:", response);
 
-          // Call your backend to verify the payment
-          fetch(`${API_BASE_URL}api/verify-payment`, { // Adjust endpoint if needed
+          // Calls  backend to verify the payment
+          fetch(`${API_BASE_URL}api/verify-payment`, { 
             method: "POST",
             headers: {
               "Content-Type": "application/json",
