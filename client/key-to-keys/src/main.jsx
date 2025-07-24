@@ -10,7 +10,8 @@ inject();
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <App/>
+
+    <App />
   </BrowserRouter>,
 );
 
