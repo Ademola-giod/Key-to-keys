@@ -33,7 +33,9 @@ const CoursePage = () => {
     }
     // implement here
      if (!isValidEmail(email)) {
-    toast.error("Please enter a valid email address");
+    toast.error("Please enter a valid email address", {
+      position: "top-center",
+    });
     return;
   }
 
