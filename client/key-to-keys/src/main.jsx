@@ -6,7 +6,7 @@ import './index.css';
 import App from './App.jsx';
 
 
-inject();
+// inject();
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
