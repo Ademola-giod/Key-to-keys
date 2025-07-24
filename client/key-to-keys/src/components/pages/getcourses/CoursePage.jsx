@@ -7,10 +7,14 @@ import { useNavigate } from "react-router-dom";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const PAYSTACK_PUBLIC_KEY = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
 
-console.log("paystack: public_key :", PAYSTACK_PUBLIC_KEY) 
+// console.log("paystack: public_key :", PAYSTACK_PUBLIC_KEY) 
 const CoursePage = () => {
   const navigate = useNavigate(); // Assigned properly here
 
+
+// check if email is valid 
+  const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const handlePaystackPayment = async () => {
     const email = document.getElementById("userEmail").value;
 
@@ -19,13 +23,18 @@ const CoursePage = () => {
       toast.error("Please enter your email", {
       position: "top-center",
       autoClose: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      closeButton: true,
+      // closeOnClick: true,
+      // pauseOnHover: true,
+      // draggable: true,
+      // closeButton: true,
     });
       return
     }
+    // implement here
+     if (!isValidEmail(email)) {
+    toast.error("Please enter a valid email address");
+    return;
+  }
 
     // Check if Paystack Public Key is available
     if (!PAYSTACK_PUBLIC_KEY) {
@@ -145,9 +154,10 @@ const CoursePage = () => {
         <input
           type="email"
           placeholder="Enter your email"
-          className="w-full border  rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-[#651b2e]"
+          className="w-full border rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-[#651b2e]"
           id="userEmail"
           aria-label="Enter your email"
+          
         />
 
         <button
@@ -157,11 +167,9 @@ const CoursePage = () => {
           Enroll Now
         </button>
 
-        {/* This div would be revealed if you were showing a link directly on this page */}
-        {/* <div id="courseLink" className="hidden mt-4 text-green-600 font-semibold">
-          ✅ Payment confirmed! <a href="https://drive.google.com/file/d/1Pe9J5nPtxBm14mrVvfJeugSCLwqwC0ox/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="underline">Access Course</a>
-        </div> */}
+        
       </div>
+      
     </section>
   );
 };
