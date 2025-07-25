@@ -50,3 +50,6 @@ export const verifyPayment = async (req, res) => {
     });
   }
 };
+
+
+console.log("🎯 COURSE LINK FROM ENV:", process.env.COURSE_LINK);
