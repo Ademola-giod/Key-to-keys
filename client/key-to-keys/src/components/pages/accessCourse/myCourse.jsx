@@ -66,7 +66,7 @@ const MyCourse = () => {
     <div className="min-h-screen flex items-center justify-center px-4 py-12 overflow-hidden">
             {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0 blur-sm"
+        className="absolute inset-0 bg-cover bg-center z-0 bg-black opacity-60"
         style={{ backgroundImage: `url(${BgImage})` }}
       ></div>
 
