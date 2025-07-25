@@ -96,7 +96,7 @@ const ThankYou = () => {
         <p className="italic ">
           ⚠️ Full access will be granted in a few minutes. You can also return to the homepage to access your course.
         </p>
-      </div>
+      
       </div>
 
 
