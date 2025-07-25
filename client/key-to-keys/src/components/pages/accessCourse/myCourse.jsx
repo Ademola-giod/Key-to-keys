@@ -7,10 +7,10 @@ const MyCourse = () => {
   const courseLink = localStorage.getItem("courseLink");
 
   useEffect(() => {
-    if (!hasPaid) {
+    if (!hasPaid || !courseLink) {
       navigate("/courses");
     }
-  }, [hasPaid, navigate]);
+  }, [hasPaid, courseLink, navigate]);
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12">
