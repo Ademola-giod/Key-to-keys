@@ -65,7 +65,7 @@ const ThankYou = () => {
 
   // Thank you screen
   return (
-    <section className="relative min-h-screen bg-primary-50 flex items-center justify-center px-4 py-12">
+    <section className="relative min-h-screen bg-primary-50 flex flex-col items-center justify-center px-4 py-12">
       <div
         className="absolute inset-0 bg-cover bg-center z-0 filter blur-sm grayscale"
         style={{ backgroundImage: `url(${BgImage})` }}
@@ -92,16 +92,17 @@ const ThankYou = () => {
             <FaHandPointRight className="inline align-middle text-2xl text-[#030101] ml-1 animate-bounce" /> Click here to download the Piano Course
           </a>
         </div>
+        {/* <div className=" mt-6 text-center text-sm text-red-700 max-w-md px-4"> */}
+        <p className="italic ">
+          ⚠️ Full access will be granted in a few minutes. You can also return to the homepage to access your course.
+        </p>
+      </div>
       </div>
 
 
 
       {/*  text below the card */}
-      <div className="relative z-10 mt-6 text-center text-sm text-red-700 max-w-md px-4">
-        <p className="italic">
-          ⚠️ Full access will be granted in a few minutes. You can also return to the homepage to access your course.
-        </p>
-      </div>
+      
     </section>
   );
 };
