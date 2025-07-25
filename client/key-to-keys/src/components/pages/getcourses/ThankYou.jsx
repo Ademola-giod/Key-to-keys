@@ -92,10 +92,12 @@ const ThankYou = () => {
             <FaHandPointRight className="inline align-middle text-2xl text-[#030101] ml-1 animate-bounce" /> Click here to download the Piano Course
           </a>
         </div>
-        {/* <div className=" mt-6 text-center text-sm text-red-700 max-w-md px-4"> */}
-        <p className="italic text-primary max-w-md mt-3">
+
+        <div className=" mt-6 text-center text-sm text-primary max-w-md px-4">
+        <p className="italic">
           ⚠️ Full access will be granted in few minutes. You can also return to the homepage to access your course.
         </p>
+        </div>
       
       </div>
 
