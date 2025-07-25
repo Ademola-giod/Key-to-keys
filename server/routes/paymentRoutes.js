@@ -8,7 +8,7 @@ const paymentRoutes = express.Router();
 paymentRoutes.post("/initiate-payment", async (req, res) => {
   const { email, amount } = req.body;
 
-  console.log("👉 Received initiate-payment request", { email, amount });
+  console.log(" Received initiate-payment request", { email, amount });
 
   try {
     const response = await axios.post(
@@ -62,7 +62,11 @@ paymentRoutes.post("/verify-payment", async (req, res) => {
         });
       }
 
-      return res.status(200).json({ status: "success", verified: true });
+      return res.status(200).json({ 
+        status: "success",
+        verified: true ,
+        courseLink: process.env.COURSE_LINK, // send it to frontend
+      });
     } else {
       return res.status(400).json({ status: "failed", verified: false });
     }

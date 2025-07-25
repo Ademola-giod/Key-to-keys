@@ -93,6 +93,12 @@ const ThankYou = () => {
           </a>
         </div>
       </div>
+
+
+
+      <div classname="">
+        <p>!! You will be granted access to download the course in few minutes !! can be also viewed in homepage after payment ..!!</p>
+      </div>
     </section>
   );
 };

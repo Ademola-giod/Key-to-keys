@@ -28,7 +28,6 @@ const VerifyRedirect = () => {
         }
       })
       .catch(() => {
-        // inside fetch error or else blocks
         toast.error("Payment not confirmed yet.", {
           autoClose: false,
         });
