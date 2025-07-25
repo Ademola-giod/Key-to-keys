@@ -38,10 +38,27 @@ const MyCourse = () => {
       .finally(() => setLoading(false));
   }, [navigate]);
 
+
+
+
+  // 
+  const Navbar = (
+    <nav className="sticky top-0 left-0 w-full z-50 px-6 md:px-10 py-4 bg-img bg-opacity-80 backdrop-blur-md text-white">
+      <div className="flex items-center justify-between w-full">
+        <div className="flex items-center gap-3 sm:ml-9">
+          <img src={LogoImg} alt="logo" className="w-7 h-8 sm:w-10 sm:h-10" />
+          <div className="text-xl font-bold">KEY TO KEYS</div>
+        </div>
+      </div>
+    </nav>
+  );
+
+  
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex flex-col">
       
+      {/* Top navbar style with logo on the left */}
       
 
       {/* Centered loading content */}
@@ -59,22 +76,14 @@ const MyCourse = () => {
 
   return (
     // <div className="min-h-screen flex items-center justify-center px-4 py-12">
-    //   <div className="max-w-xl text-center">
-    //     <h1 className="text-3xl font-bold mb-4">🎉 Welcome to Your Course</h1>
-    //     <p className="text-lg mb-6">Thanks for enrolling! You can now access your course below.</p>
 
-    <div className="min-h-screen bg-white flex flex-col">
-      {/* ✅ Top nav with logo */}
-      <nav className="p-4">
-        <img src={LogoImg} alt="Logo" className="w-10 ml-6" />
-      </nav>
+     <div className="min-h-screen bg-white flex flex-col">
+      <Navbar />
 
-      {/* Main course access section */}
       <div className="flex-grow flex items-center justify-center px-4 py-12">
-        <div className="max-w-xl text-center">
-          <h1 className="text-3xl font-bold mb-4">🎉 Welcome to Your Course</h1>
-          <p className="text-lg mb-6">Thanks for enrolling! You can now access your course below.</p>
-
+      <div className="max-w-xl text-center">
+        <h1 className="text-3xl font-bold mb-4">🎉 Welcome to Your Course</h1>
+        <p className="text-lg mb-6">Thanks for enrolling! You can now access your course below.</p>
 
         {courseLink ? (
           <a
@@ -88,7 +97,7 @@ const MyCourse = () => {
         ) : (
           <p className="text-red-500">Course link not available. Please contact support.</p>
         )}
-        </div>
+      </div>
       </div>
     </div>
   );
