@@ -53,7 +53,6 @@ const MyCourse = () => {
     </nav>
   );
 
-  
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex flex-col">
@@ -75,12 +74,7 @@ const MyCourse = () => {
 
 
   return (
-    // <div className="min-h-screen flex items-center justify-center px-4 py-12">
-
-     <div className="min-h-screen bg-white flex flex-col">
-      <Navbar />
-
-      <div className="flex-grow flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12">
       <div className="max-w-xl text-center">
         <h1 className="text-3xl font-bold mb-4">🎉 Welcome to Your Course</h1>
         <p className="text-lg mb-6">Thanks for enrolling! You can now access your course below.</p>
@@ -97,7 +91,6 @@ const MyCourse = () => {
         ) : (
           <p className="text-red-500">Course link not available. Please contact support.</p>
         )}
-      </div>
       </div>
     </div>
   );
