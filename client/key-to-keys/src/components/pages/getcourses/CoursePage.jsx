@@ -157,7 +157,7 @@ const CoursePage = () => {
           <li><strong>Duration:</strong> ~13hrs</li>
           <li><strong>File size:</strong> 9.9 GB</li>
           {/* <li><strong>Price:</strong> ₦500</li> */}
-          <li><strong>Price:</strong> ₦30,000</li>
+          {/* <li><strong>Price:</strong> ₦30,000</li> */}
         </ul>
 
         <input
