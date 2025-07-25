@@ -2,7 +2,9 @@
 // export default MyCourse;
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BgImage from "../../../assets/hero-bg.jpg";
+// import BgImage from "../../../assets/hero-bg.jpg";
+import coursepage from "../../../assets/coursepage.jpg";
+
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -66,8 +68,8 @@ const MyCourse = () => {
     <div className="min-h-screen flex items-center justify-center px-4 py-12 overflow-hidden">
             {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0 bg-black opacity-60"
-        style={{ backgroundImage: `url(${BgImage})` }}
+        className="absolute inset-0 bg-cover bg-center z-0 filter blur-sm grayscale"
+        style={{ backgroundImage: `url(${coursepage})` }}
       ></div>
 
       

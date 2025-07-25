@@ -97,7 +97,7 @@ const ThankYou = () => {
 
 
       {/*  text below the card */}
-      <div className="relative z-10 mt-6 text-center text-sm text-gray-700 max-w-md px-4">
+      <div className="relative z-10 mt-6 text-center text-sm text-red-700 max-w-md px-4">
         <p className="italic">
           ⚠️ Full access will be granted in a few minutes. You can also return to the homepage to access your course.
         </p>
