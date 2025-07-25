@@ -12,7 +12,7 @@ connectDB();
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:5173", //for development
+  "https://localhost:5173/", //for development
   "https://learnkeytokeys.com",          // Remove www here if you use non-www domain
   "https://www.learnkeytokeys.com" //for live site
 ];

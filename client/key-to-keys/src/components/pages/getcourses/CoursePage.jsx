@@ -86,10 +86,12 @@ const CoursePage = () => {
               return res.json();
             })
             .then(data => {
-              if (data.status === "success" || data.verified) { // Check for a 'verified' flag from your backend
-                // alert("Payment confirmed! Accessing course link."); // Using alert for simplicity
-                // document.getElementById("courseLink").classList.remove("hidden"); // If you have a hidden link
-                toast.success("Payment confirmed! ", {
+              if (data.status === "success" || data.verified) { 
+                // Save course access in localStorage
+                  localStorage.setItem("hasPaid", "true");
+                  localStorage.setItem("courseLink", data.courseLink); // Make sure backend sends this
+                  
+                  toast.success("Payment confirmed! ", {
                   position: "top-center",
                   autoClose: true,
                   closeOnClick: true,
