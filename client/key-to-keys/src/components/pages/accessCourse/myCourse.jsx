@@ -43,10 +43,13 @@ const MyCourse = () => {
       <div className="min-h-screen bg-white flex flex-col">
       
       {/* Top navbar style with logo on the left */}
-      <div className="w-full flex items-center justify-between px-6 py-4 shadow-md">
-        <img src={LogoImg} alt="Logo" className="w-28 h-auto" />
+      {/* <div className="w-full flex items-center justify-between px-6 py-4 shadow-md"> */}
+        <div className="flex items-left gap-3 sm:ml-9">
+              <img src={LogoImg} alt="logo" className="w-7 h-8 sm:w-10 sm:h-10" />
+              <div className="text-xl font-bold">KEY TO KEYS</div>
+            </div>
         {/* You can add something on the right if you want later */}
-      </div>
+    
 
       {/* Centered loading content */}
       <div className="flex-grow flex flex-col items-center justify-center">
