@@ -96,8 +96,11 @@ const ThankYou = () => {
 
 
 
-      <div classname="">
-        <p>!! You will be granted access to download the course in few minutes !! can be also viewed in homepage after payment ..!!</p>
+      {/*  text below the card */}
+      <div className="relative z-10 mt-6 text-center text-sm text-gray-700 max-w-md px-4">
+        <p className="italic">
+          ⚠️ Full access will be granted in a few minutes. You can also return to the homepage to access your course.
+        </p>
       </div>
     </section>
   );
