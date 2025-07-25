@@ -93,7 +93,7 @@ const ThankYou = () => {
           </a>
         </div>
         {/* <div className=" mt-6 text-center text-sm text-red-700 max-w-md px-4"> */}
-        <p className="italic text-red-700 max-w-md mt-3">
+        <p className="italic text-max-w-md mt-3">
           ⚠️ Full access will be granted in a few minutes. You can also return to the homepage to access your course.
         </p>
       
