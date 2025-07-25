@@ -42,14 +42,7 @@ const MyCourse = () => {
     return (
       <div className="min-h-screen bg-white flex flex-col">
       
-      {/* Top navbar style with logo on the left */}
-      {/* <div className="w-full flex items-center justify-between px-6 py-4 shadow-md"> */}
-        <div className="flex items-left gap-3 sm:ml-9">
-              <img src={LogoImg} alt="logo" className="w-7 h-8 sm:w-10 sm:h-10" />
-              <div className="text-xl font-bold">KEY TO KEYS</div>
-            </div>
-        {/* You can add something on the right if you want later */}
-    
+      
 
       {/* Centered loading content */}
       <div className="flex-grow flex flex-col items-center justify-center">
@@ -65,10 +58,23 @@ const MyCourse = () => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12">
-      <div className="max-w-xl text-center">
-        <h1 className="text-3xl font-bold mb-4">🎉 Welcome to Your Course</h1>
-        <p className="text-lg mb-6">Thanks for enrolling! You can now access your course below.</p>
+    // <div className="min-h-screen flex items-center justify-center px-4 py-12">
+    //   <div className="max-w-xl text-center">
+    //     <h1 className="text-3xl font-bold mb-4">🎉 Welcome to Your Course</h1>
+    //     <p className="text-lg mb-6">Thanks for enrolling! You can now access your course below.</p>
+
+    <div className="min-h-screen bg-white flex flex-col">
+      {/* ✅ Top nav with logo */}
+      <nav className="p-4">
+        <img src={LogoImg} alt="Logo" className="w-10 ml-6" />
+      </nav>
+
+      {/* Main course access section */}
+      <div className="flex-grow flex items-center justify-center px-4 py-12">
+        <div className="max-w-xl text-center">
+          <h1 className="text-3xl font-bold mb-4">🎉 Welcome to Your Course</h1>
+          <p className="text-lg mb-6">Thanks for enrolling! You can now access your course below.</p>
+
 
         {courseLink ? (
           <a
@@ -82,6 +88,7 @@ const MyCourse = () => {
         ) : (
           <p className="text-red-500">Course link not available. Please contact support.</p>
         )}
+        </div>
       </div>
     </div>
   );
