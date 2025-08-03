@@ -102,8 +102,6 @@ const ThankYou = () => {
       </div>
 
 
-
-      {/*  text below the card */}
       
     </section>
   );

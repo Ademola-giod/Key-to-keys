@@ -1,8 +1,6 @@
 
-// export default MyCourse;
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import BgImage from "../../../assets/hero-bg.jpg";
 import coursepage from "../../../assets/coursepage.jpg";
 
 
@@ -39,10 +37,7 @@ const MyCourse = () => {
       .finally(() => setLoading(false));
   }, [navigate]);
 
-
-
-
-  // 
+  // loading state
 
   if (loading) {
     return (
