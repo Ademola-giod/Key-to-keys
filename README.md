@@ -16,7 +16,7 @@ Designed with a clean, responsive interface and built using modern web technolog
 
 ---
 
-# ✨ Features
+# Features
 
 - Beautiful and responsive landing page
 - 📚 Piano course showcase
@@ -31,7 +31,7 @@ Designed with a clean, responsive interface and built using modern web technolog
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
 ### Frontend
 
@@ -137,7 +137,7 @@ FRONTEND_URL=http://localhost:5173
 
 ---
 
-# 💳 Payment Flow
+#  Payment Flow
 
 1. User selects a piano course.
 2. User enters their email.
@@ -176,7 +176,7 @@ The application is fully responsive across:
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
 - User authentication
 - Student dashboard
