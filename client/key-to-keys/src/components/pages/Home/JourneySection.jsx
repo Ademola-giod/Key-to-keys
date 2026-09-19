@@ -34,7 +34,7 @@ const JourneySection = () => {
         <p className="text-lg md:text-xl font-medium">
           The journey is smoother <br />
           when you learn with the <br />
-          keys to keys approach.
+          key to keys approach.
         </p>
       </div>
     </section>

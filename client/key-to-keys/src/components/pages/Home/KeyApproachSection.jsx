@@ -39,7 +39,7 @@ const KeysApproachSection = () => {
       {/* Section Header */}
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">
-          THE KEYS TO KEYS APPROACH
+          THE KEY TO KEYS APPROACH
         </h2>
         <p className="text-gray-700">
           We are not interested in making you a clone. Rather, we are focused on teaching and handing over the essential keys that open the door of professionalism and mastery on the keys.
